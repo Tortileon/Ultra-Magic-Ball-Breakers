@@ -1,15 +1,19 @@
 using UnityEngine;
-using UnityEngine.WSA;
+
 
 public class BallBehaviour : MonoBehaviour
 {
 
-    public float speed = 2.0f;
+    public float speed = 3.0f;
     private Vector2 direction;
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    { 
-        direction = new Vector2(1, 1).normalized;
+    {
+        int randintx = Random.Range(-1, 1);
+        int randinty = Random.Range(1, 2);
+        direction = new Vector3(randintx, randinty).normalized;
     }
 
     // Update is called once per frame
@@ -32,6 +36,8 @@ public class BallBehaviour : MonoBehaviour
 
             Destroy(this.gameObject);
 
+            
+            
         }
     }
 

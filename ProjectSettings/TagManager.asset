@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PurpleBrick
   - RedBrick
+  - GreenBrick
+  - BlueBrick
   layers:
   - Default
   - TransparentFX
