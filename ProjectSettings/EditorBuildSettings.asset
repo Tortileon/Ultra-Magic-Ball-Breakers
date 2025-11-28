@@ -4,6 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Main Menu.unity
+    guid: 974814b4daa79e54c8474b59b50331a0
+  - enabled: 1
+    path: Assets/Magic ball breakers.unity
+    guid: 812a93a819068b442be79f7028a2dd8f
+  - enabled: 1
+    path: Assets/Game over.unity
+    guid: b0d86ca8852289d4281236ff9d29ac00
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

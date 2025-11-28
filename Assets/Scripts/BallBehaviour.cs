@@ -1,4 +1,6 @@
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class BallBehaviour : MonoBehaviour
@@ -13,7 +15,7 @@ public class BallBehaviour : MonoBehaviour
     {
         int randintx = Random.Range(-1, 1);
         int randinty = Random.Range(1, 2);
-        direction = new Vector3(randintx, randinty).normalized;
+        direction = new Vector3(randintx, randinty).normalized; // initial ball trajectory is randomised here
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class BallBehaviour : MonoBehaviour
         transform.position += speed * Time.deltaTime * (Vector3)direction; 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    async private void OnCollisionEnter2D(Collision2D collision)
     {
         // Get the normal vector of the surface the object collided with
         Vector2 surfaceNormal = collision.contacts[0].normal;
@@ -35,9 +37,11 @@ public class BallBehaviour : MonoBehaviour
         {
 
             Destroy(this.gameObject);
+            await Task.Delay(1000);
+            SceneManager.LoadScene("Game Over"); // if ball touches the spikes the game pauses for a second and moves you to the game over screen
 
-            
-            
+
+
         }
     }
 

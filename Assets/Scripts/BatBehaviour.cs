@@ -17,12 +17,12 @@ public class BatBehaviour : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A) && gameObject.name == "Bat")
         {
-            transform.localPosition += Vector3.left * Speed * Time.deltaTime;
+            transform.localPosition += Vector3.left * Speed * Time.deltaTime; // moves bat left
         }
 
         else if (Input.GetKey(KeyCode.D) && gameObject.name == "Bat")
         {
-            transform.localPosition += Vector3.right * Speed * Time.deltaTime;
+            transform.localPosition += Vector3.right * Speed * Time.deltaTime; // moves bat right
         }
     }
 
@@ -32,11 +32,11 @@ public class BatBehaviour : MonoBehaviour
         if (collision.gameObject.name == "Left Wall" && Input.GetKey(KeyCode.A))
         {
 
-            transform.localPosition += Vector3.right * 0.2f * Time.deltaTime;
+            transform.localPosition += Vector3.right * 0.2f * Time.deltaTime; // does not function
 
         }
             
-        else if (collision.gameObject.name == "Right Wall" && Input.GetKey(KeyCode.D))
+        else if (collision.gameObject.name == "Right Wall" && Input.GetKey(KeyCode.D)) // does not function
         {
 
             

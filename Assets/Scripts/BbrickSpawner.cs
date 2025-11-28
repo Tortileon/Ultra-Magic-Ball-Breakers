@@ -54,7 +54,7 @@ public class BbrickSpawner : MonoBehaviour
         }
 
         oldpos.x = -8;
-        transform.position = oldpos;
+        transform.position = oldpos; // tries to reset the brick spawner to it's original position after it's gone through the array
 
         Debug.Log("Array is full! No more bricks.");
 

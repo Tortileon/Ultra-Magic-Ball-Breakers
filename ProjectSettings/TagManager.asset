@@ -45,5 +45,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: brick
+    uniqueID: 3150080261
+    locked: 0
+  - name: effect
+    uniqueID: 1164101669
+    locked: 0
   m_RenderingLayers:
   - Default

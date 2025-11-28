@@ -10,6 +10,7 @@ public class GbrickSpawner : MonoBehaviour
     void Start()
     {
         gbrickClones = new BrickBehaviour[6];
+        // NOTE: Hide and display gbrick clones to avoid weird errors
     }
 
     // Update is called once per frame
@@ -56,9 +57,9 @@ public class GbrickSpawner : MonoBehaviour
         }
 
         oldpos.x = -8;
-        transform.position = oldpos;
+        transform.position = oldpos;  // tries to reset the brick spawner to it's original position after it's gone through the array
 
         Debug.Log("Array is full! No more bricks.");
 
-    } // NOTE: MAKE A NEW SCRIPT CALLED PBRICKSPAWNER AND COPY ALL THE PBRICKSPAWNER CODE FROM HERE INTO THERE TYSM!
+    } // NOTE: MAKE A NEW SCRIPT CALLED PBRICKSPAWNER AND COPY ALL THE PBRICKSPAWNER CODE FROM HERE INTO THERE!
 }
